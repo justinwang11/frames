@@ -1,0 +1,98 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700';
+p {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size:16px;
+}
+section.top-section {
+	background-size:cover;
+	background-position: center;
+	background-image: url('../imgs/revision.png');
+}
+section > .container {
+	padding:75px 0;
+}
+.background-opaque-white {
+	background-color:rgba(255, 255, 255, 0.9);
+	padding:75px 0;
+}
+.blue-bar-separator {
+	min-height:60px;
+	background-color: #1A3553;
+}
+.text-sm {
+	font-size: .9em;
+}
+.toc-text {
+	font-size:.9em;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.toc-row .col-xs-1 {
+	margin-top:2%;
+}
+.btn-blue {
+	color:white !important;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 1.45em !important;
+	background-color:#1a3553 !important;
+	border-radius: 10px !important;
+	padding:10px 50px !important;
+}
+.btn-blue:hover,
+.btn-blue:focus, {
+	color:white !important;
+	background-color:#1a3553;
+}
+input.form-control,
+textarea.form-control,
+select.form-control {
+	margin:20px 0;
+	border: 1px solid black;
+	border-radius: 0;
+	height:45px;
+	-webkit-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.51);
+    -moz-box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.51);
+	box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.51);
+	transition: all .5s ease;
+}
+select.form-control {
+	color:#a1a1a1;
+}
+input.form-control:focus,
+select.form-control:focus {
+    border-color: #a1a1a1 !important;
+    outline: 0;
+    -webkit-box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.51);
+    -moz-box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.51);
+	box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.51);
+}
+.non-opaque-left-column {
+	opacity: 1;
+    background-color: white;
+    margin-left: 15px;
+    margin-right:-15px;
+}
+
+.padding-none {
+	padding:0 !important;
+}
+.margin-top-sm {
+	margin-top:10px;
+}
+.margin-top-md {
+	margin-top:15px;
+}
+.margin-none {
+	margin:0 !important;
+}
+.width-75 {
+	max-width: 75%;
+	margin: 0 auto;
+}
+.radio-text {
+	display:inline-block;
+	font-weight: 300px;
+	padding:0 10px;
+}

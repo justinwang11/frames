@@ -1,0 +1,31 @@
+.left-column p,
+.left-column h3 {
+	text-align:center;
+}
+.left-column .icon-img {
+	max-height: 50px;
+    margin-top: 75px !important;
+    margin-bottom: 15px !important;
+}
+.left-column img.img-fluid {
+	max-width:75%;
+	margin:0 auto;
+}
+.left-column .red-text {
+	color:#ff0000;
+	font-size:2.25em;
+	font-weight: bold;
+}
+.left-column .red-text-lg {
+	color:#ff0000;
+	font-size:3.5em;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin-bottom: 25px;
+}
+.left-column .red-text-lg + p {
+	padding:0 10%;
+}
+.left-column .margin-xxs {
+	margin:2px;
+}

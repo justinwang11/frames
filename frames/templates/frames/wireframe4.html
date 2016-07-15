@@ -1,0 +1,110 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<title>WireFrame 4</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="" > <!-- favicon -->
+	<link rel="stylesheet" href="{% static 'frames/css/master3.css' %}">
+	<link rel="stylesheet" href="{% static 'frames/css/left-column.css' %}">
+	<!-- bootstrap & jQuery CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+	<section class='top-section'>
+		<div class='container background-opaque-white'>
+			<div class='row'>
+				<div class='col-sm-6 left-column'>
+					<img class='img-fluid img-responsive' src="{% static 'frames/imgs/eagle.png' %}"/>
+					<h3 class='red-text'>Rates as low as</h3>
+					<h3 class='red-text-lg'>5.99% APR</h3>
+					<p class='text-center'>Rates from 5.99% to 35.19% APR. <br />Best APR available to those with excellent credit*</p>
+					<img class='img-fluid img-responsive icon-img' src="{% static 'frames/imgs/flag.png' %}"/>
+					<p class='text-center'>Special Rates for Active Duty Military</p>
+					<img class='img-fluid img-responsive icon-img' src="{% static 'frames/imgs/phone.png' %}"/>
+					<p class='text-center margin-xxs'>Have questions? Call Us!</p>
+					<p class='text-center margin-xxs'><b>Toll-free (312) 471-6991</b></p>
+					<p class='text-center margin-xxs'>10 a.m. to 6 p.m. (Eastern)</p>
+					<p class='text-center'>Monday - Friday</p>
+				</div>
+				<div class='col-sm-6'>
+					<div class='width-75'>
+						<form id="form" action='/frames/wireframe4_new/' method='post'>{% csrf_token %}
+							<select class="form-control" id="form" name='credit_request_type'>
+								<option selected="">Type of Credit Requesting </option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+							<p>Type(s) of Loan you are applying for (Check all that apply)</p>
+							<input  type='checkbox' name='loan_types' value='auto_loan_new' /><p class='radio-text'>Auto Loan (New)</p><br />
+							<input  type='checkbox' name='loan_types' value='unsecured_personal_loan_new' /><p class='radio-text'>Unsecured Personal Loan (New)</p><br />
+							<input  type='checkbox' name='loan_types' value='secured_personal_loan' /><p class='radio-text'>Secured Personal Loan</p><br />
+							<input  type='checkbox' name='loan_types' value='auto-loan_refinance' /><p class='radio-text'>Auto Loan (Refinance)</p><br />
+							<input  type='checkbox' name='loan_types' value='unsecured_personal_loan_refinance' /><p class='radio-text'>Unsecured Presonal Loan (Refinance)</p><br />
+							<input  type='checkbox' name='loan_types' value='student_loans' /><p class='radio-text'>Student Loans</p><br />
+							<input  type='checkbox' name='loan_types' value='home_improvement' /><p class='radio-text'>Home Imporvement</p><br />
+							<input  type='checkbox' name='loan_types' value='other' /><p class='radio-text'>Other</p><br />
+							<div class='row padding-none'>
+								<div class='col-sm-6 '>
+									<input class='form-control margin-none' name='loan_type' placeholder="Type of Loan">
+								</div>
+							</div>
+							<input class='form-control margin-top-md' name='loan_amount' placeholder="Loan Amount">
+							<p class='margin-top-md'>Want to repay:</p>
+
+							<input type='radio' name='repay' value='monthly_allotment'/> <p class='radio-text'>Monthly Allotment</p>
+							<input type='radio' name='repay' value='monthly_bank_ach'/> <p class='radio-text'>Monthly Bank ACH</p>
+							<br/>
+							<input type='radio' name='repay' value='federal_savings'/> <p class='radio-text'>The Federal Savings Bank Checking account<br/><i class='text-sm'>(save up to 10% on your loan)</i></p>
+							<div class='text-left margin-top-md'>
+								<input type="submit" value="Continue" class='btn btn-blue'>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class='blue-bar-separator'><!-- Separator--></div>
+	<section class='bottom-section'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-xs-12'>
+					<p><b>*Funding</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-xs-12'>
+					<p><b>APR</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-xs-12'>
+					<p><b>Eligibility Criteria</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-xs-12'>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+</body>
+</html>

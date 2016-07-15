@@ -1,0 +1,144 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<title>WireFrame 1</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="" > <!-- favicon -->
+	<link rel="stylesheet" type="text/css" href="{% static 'frames/css/master.css' %}" >
+	<link rel="stylesheet" href="{% static 'frames/css/wireframe1.css' %}" >
+	<!-- bootstrap & jQuery CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- slick slider cdn includes -->
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+	<!-- Add the slick-theme.css if you want default styling -->
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+	<script>
+		// multi-framed carousel settings
+		$(function(){
+			$('.carousel-slider').slick({
+				dots: true,
+				infinite: false,
+				speed: 300,
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						infinite: true,
+						dots: true
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			    // You can unslick at a given breakpoint now by adding:
+			    // settings: "unslick"
+			    // instead of a settings object
+			    ]
+			});
+		});
+
+	</script>
+</head>
+<body>
+
+	<section class='top-section'>
+		<div class='container padding-none'>
+			<div class='row'>
+				<div class='col-sm-6 left-column background-opaque-white'>
+					<img class='img-fluid img-responsive' src="{% static 'frames/imgs/eagle.png' %}"/>
+					<div class='form-wrap text-center'>
+						<form action='/frames/wireframe1_new/' method='post'>{% csrf_token %}
+							<h3 class='red-text'>PERSONAL LOANS FROM $3,001 TO $35,000</h3>
+							<p class='text-center'>We've already loaned customers more than $385 million, and we want to work with you.</p>
+							<input class='form-control' name='amount' placeholder="How much do you need?" />
+							<select class="form-control" id="sel1" name='purpose'>
+								<option selected="">What is it for?</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+							<select class="form-control" id="sel1" name='credit'>
+								<option selected="">How is your credit?</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+							<input type="submit" value="Let's Get Started!" class='btn btn-blue'>
+							<p class='text-sm margin-top-sm'>This DOES NOT affect your credit score.</p>
+						</form>
+					</div>
+				</div>
+				<div class='col-sm-6'>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class='blue-bar-separator'>
+		<div class='container'>
+			<div class="carousel-slider">
+				<div class='carousel-frame'>
+					<img class='img-fluid' src="{% static 'frames/imgs/credit-cards.png' %}">
+					<p>Consolidate Credit Cards</p>
+				</div>
+				<div class='carousel-frame'>
+					<img class='img-fluid' src="{% static 'frames/imgs/home.png' %}">
+					<p>Home Improvement</p>
+				</div>
+				<div class='carousel-frame'>
+					<img class='img-fluid' src="{% static 'frames/imgs/repair.png' %}">
+					<p>Repair Your Vehicle</p>
+				</div>
+				<div class='carousel-frame'>
+					<img class='img-fluid' src="{% static 'frames/imgs/money.png' %}">
+					<p>Consolidate Loans</p>
+				</div>
+				<div class='carousel-frame'>
+					<img class='img-fluid' src="{% static 'frames/imgs/credit-cards.png' %}">
+					<p>Consolidate Credit Cards</p>
+				</div>
+				<div class='carousel-frame'>
+					<img class='img-fluid' src="{% static 'frames/imgs/home.png' %}">
+					<p>Home Improvement</p>
+				</div>
+				<div class='carousel-frame'>
+					<img class='img-fluid' src="{% static 'frames/imgs/repair.png' %}">
+					<p>Repair Your Vehicle</p>
+				</div>
+				<div class='carousel-frame'>
+					<img class='img-fluid' src="{% static 'frames/imgs/money.png' %}">
+					<p>Consolidate Loans</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

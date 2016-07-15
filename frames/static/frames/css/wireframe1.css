@@ -1,0 +1,43 @@
+/* Left column CSS */
+.left-column p,
+.left-column h3 {
+	text-align:center;
+}
+.left-column img.img-fluid {
+	max-width:75%;
+	margin:0 auto;
+}
+.left-column .red-text {
+	color:#ff0000;
+	font-size:2.25em;
+	font-weight: bold;
+}
+.left-column.background-opaque-white .form-wrap {
+	max-width:75%;
+	margin:0 auto;
+}
+.left-column.background-opaque-white .red-text + p {
+	padding:5% 10%;
+}
+.carousel-slider {
+	margin:25px 0;
+}
+.carousel-slider .carousel-frame {
+	padding:15px;
+}
+.carousel-slider .carousel-frame img.img-fluid {
+	max-height: 100px;
+	margin:0 auto;
+}
+.carousel-slider .carousel-frame p {
+	color: white;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	text-align: center;
+	padding-top:25px;
+	font-weight: 300;
+}
+.slick-prev:before, 
+.slick-next:before {
+    font-size: 40px !important;
+}

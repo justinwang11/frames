@@ -1,0 +1,314 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<title>WireFrame 2</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="" > <!-- favicon -->
+	<link rel="stylesheet" type="text/css" href="{% static 'frames/css/master3.css' %}" >
+	<link rel="stylesheet" type="text/css" href="{% static 'frames/css/left-column.css' %}" >
+	<!-- bootstrap & jQuery CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+	<section class='top-section'>
+		<div class='container background-opaque-white'>
+			<div class='row'>
+				<div class='col-sm-6 left-column'>
+					<img class='img-fluid img-responsive' src="{% static 'frames/imgs/eagle.png' %}"/>
+					<h3 class='red-text'>Rates as low as</h3>
+					<h3 class='red-text-lg'>5.99% APR</h3>
+					<p class='text-center'>Rates from 5.99% to 35.19% APR. <br />Best APR :available to those with excellent credit*</p>
+					<img class='img-fluid img-responsive icon-img' src="{% static 'frames/imgs/flag.png' %}"/>
+					<p class='text-center'>Special Rates for Active Duty Military</p>
+					<img class='img-fluid img-responsive icon-img' src="{% static 'frames/imgs/phone.png' %}"/>
+					<p class='text-center margin-xxs'>Have questions? Call Us!</p>
+					<p class='text-center margin-xxs'><b>Toll-free (312) 471-6991</b></p>
+					<p class='text-center margin-xxs'>10 a.m. to 6 p.m. (Eastern)</p>
+					<p class='text-center'>Monday - Friday</p>
+				</div>
+				<div class='col-sm-6'>
+					<div class='width-75'>
+						<form id="form" action='/frames/wireframe2_new/' method='POST'>{% csrf_token %}
+							<input class='form-control' name='first_name' placeholder="First Name">
+							<input class='form-control' name='last_name' placeholder="Last Name">
+							<input class='form-control' name='street_address' placeholder="Street Address">
+							<input class='form-control' name='city' placeholder="City">
+							<select class="form-control" id="form" name='state'>
+								<option selected="">State</option>
+								<option value="AL">Alabama</option>
+								<option value="AK">Alaska</option>
+								<option value="AZ">Arizona</option>
+								<option value="AR">Arkansas</option>
+								<option value="CA">California</option>
+								<option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+							</select>
+							<input class='form-control' name='zip_code' placeholder="Zip Code">
+							<div class='row padding-none'>
+								<div class='col-xs-4'>
+									<select class="form-control margin-none" id="form" name='birth_month'>
+										<option selected="">Birth Month</option>
+										<option value="JAN">January</option>
+										<option value="FEB">February</option>
+										<option value="MAR">March</option>
+										<option value="APR">April</option>
+	                  <option value="MAY">May</option>
+	                  <option value="JUN">June</option>
+	                  <option value="JUL">July</option>
+	                  <option value="AUG">August</option>
+	                  <option value="SEP">September</option>
+	                  <option value="OCT">October</option>
+	                  <option value="NOV">November</option>
+	                  <option value="DEC">December</option>
+									</select>
+								</div>
+								<div class='col-xs-4'>
+									<select class="form-control margin-none" id="form" name='birth_day'>
+										<option selected="">Birth Day</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                    <option>31</option>
+									</select>
+								</div>
+								<div class='col-xs-4'>
+									<select class="form-control margin-none" id="form" name='birth_year'>
+										<option selected="">Birth Year</option>
+										<option>1920</option>
+										<option>1921</option>
+										<option>1922</option>
+										<option>1923</option>
+                    <option>1924</option>
+                    <option>1925</option>
+                    <option>1926</option>
+                    <option>1927</option>
+                    <option>1928</option>
+                    <option>1929</option>
+                    <option>1930</option>
+                    <option>1931</option>
+                    <option>1932</option>
+                    <option>1933</option>
+                    <option>1934</option>
+                    <option>1935</option>
+                    <option>1936</option>
+                    <option>1937</option>
+                    <option>1938</option>
+                    <option>1939</option>
+                    <option>1940</option>
+                    <option>1941</option>
+                    <option>1942</option>
+                    <option>1943</option>
+                    <option>1944</option>
+                    <option>1945</option>
+                    <option>1946</option>
+                    <option>1947</option>
+                    <option>1948</option>
+                    <option>1949</option>
+                    <option>1950</option>
+                    <option>1951</option>
+                    <option>1952</option>
+                    <option>1953</option>
+                    <option>1954</option>
+                    <option>1955</option>
+                    <option>1956</option>
+                    <option>1957</option>
+                    <option>1958</option>
+                    <option>1959</option>
+                    <option>1960</option>
+                    <option>1961</option>
+                    <option>1962</option>
+                    <option>1963</option>
+                    <option>1964</option>
+                    <option>1965</option>
+                    <option>1966</option>
+                    <option>1967</option>
+                    <option>1968</option>
+                    <option>1969</option>
+                    <option>1970</option>
+                    <option>1971</option>
+                    <option>1972</option>
+                    <option>1973</option>
+                    <option>1974</option>
+                    <option>1975</option>
+                    <option>1976</option>
+                    <option>1977</option>
+                    <option>1978</option>
+                    <option>1979</option>
+                    <option>1980</option>
+                    <option>1981</option>
+                    <option>1982</option>
+                    <option>1983</option>
+                    <option>1984</option>
+                    <option>1985</option>
+                    <option>1986</option>
+                    <option>1987</option>
+                    <option>1988</option>
+                    <option>1989</option>
+                    <option>1990</option>
+                    <option>1991</option>
+                    <option>1992</option>
+                    <option>1993</option>
+                    <option>1994</option>
+                    <option>1995</option>
+                    <option>1996</option>
+                    <option>1997</option>
+                    <option>1998</option>
+                    <option>1999</option>
+                    <option>2000</option>
+                    <option>2001</option>
+                    <option>2002</option>
+                    <option>2003</option>
+                    <option>2004</option>
+                    <option>2005</option>
+                    <option>2006</option>
+                    <option>2007</option>
+                    <option>2008</option>
+                    <option>2009</option>
+                    <option>2010</option>
+                    <option>2011</option>
+                    <option>2012</option>
+                    <option>2013</option>
+                    <option>2014</option>
+                    <option>2015</option>
+                    <option>2016</option>
+									</select>
+								</div>
+							</div>
+							<input class='form-control' name='annual_income' placeholder="Annual Income">
+							<input class='form-control' name='email' placeholder="name@domain.com">
+							<input class='form-control' name='password' type='password' placeholder="Password">
+							<p class='text-sm margin-top-sm margin-bottom-sm'>I have read and agree to the following:</p>
+							<div class='row toc-row'>
+								<div class='col-xs-1'>
+									<input type='checkbox' checked='false' name='terms' />
+								</div>
+								<p class='col-xs-10 toc-text'><u class='text-danger'>Terms of Use</u> Consenting to Electronic Contracts and Communication and <u class='text-danger'>Arbitration Agreement</u></p>
+							</div>
+							<div class='row toc-row'>
+								<div class='col-xs-1'>
+									<input type='checkbox' checked='false' name='profile-auth' />
+								</div>
+								<p class='col-xs-10 toc-text'><u class='text-danger'>Credit Profile Authorization</u>to obtain and use credit bureau information</p>
+							</div>
+							<div class='text-center margin-top-md'>
+								<input type="submit" class='btn btn-blue' value="Let's get started!">
+								<p class='text-sm margin-top-md'>This DOES NOT affect your credit score.</p>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class='blue-bar-separator'><!-- Separator--></div>
+	<section class='bottom-section'>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-xs-12'>
+					<p><b>*Funding</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-xs-12'>
+					<p><b>APR</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-xs-12'>
+					<p><b>Eligibility Criteria</b> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-xs-12'>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+</body>
+</html>
