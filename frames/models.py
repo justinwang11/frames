@@ -51,10 +51,10 @@ class Applicant(models.Model):
     WIREFRAME 2
     """
     #first name
-    first_name = models.CharField(max_length=200, blank=True, null=True)
+    first_name = models.CharField(max_length=200)
 
     #last name
-    last_name = models.CharField(max_length=200, blank=True, null=True)
+    last_name = models.CharField(max_length=200)
 
     #address
     street_address = models.CharField(max_length=200, blank=True, null=True)

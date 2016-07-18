@@ -28,7 +28,7 @@ def wireframe2_new(request):
         if form.is_valid():
             form.save()
             return redirect('wireframe3')
-        return redirect('wireframe1')
+        return redirect('wireframe2')
     return redirect('wireframe1')
 
 def wireframe3(request):
@@ -41,7 +41,7 @@ def wireframe3_new(request):
         if form.is_valid():
             form.save()
             return redirect('wireframe4')
-        return redirect('wireframe1')
+        return redirect('wireframe3')
     return redirect('wireframe1')
 
 def wireframe4(request):
@@ -54,7 +54,7 @@ def wireframe4_new(request):
         if form.is_valid():
             form.save()
             return redirect('wireframe5')
-        return redirect('wireframe1')
+        return redirect('wireframe4')
     return redirect('wireframe1')
 
 def wireframe5(request):
